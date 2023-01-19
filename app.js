@@ -44,8 +44,8 @@ const lastNames = [
 ];
 
 const randomChoice = (arr) => {
-  const randomNum = Math.floor(Math.random() * arr.length);
-  return randomNum;
+  const randomNumber = Math.floor(Math.random() * arr.length);
+  return randomNumber;
 };
 
 const people = [];
