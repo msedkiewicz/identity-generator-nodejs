@@ -57,11 +57,15 @@ for (let i = 0; i < 20; i++) {
   if (gender === "M") person.name = maleNames[randomChoice(maleNames)];
   if (gender === "F") person.name = femaleNames[randomChoice(femaleNames)];
   person.lastName = lastNames[randomChoice(lastNames)];
-  person.age = Math.floor(Math.random() * 100 + 1);
+  person.age = Math.floor(Math.random() * (78 - 18) + 1);
+  person.email =
+    person.name.toLowerCase() +
+    "." +
+    person.lastName.toLocaleLowerCase() +
+    "@yahoo.com";
+  person.phone = "+44" + Math.floor(Math.random() * 1000000000 + 1000000000);
   people.push(person);
 }
-
-// console.log(people);
 
 const data = JSON.stringify(people);
 
